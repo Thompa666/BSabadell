@@ -1,6 +1,6 @@
 package com.kjohnson.sunriseapp.domain.interactors.impl;
 
-import com.kjohnson.sunriseapp.data.gateway.SunriseHourGateway;
+import com.kjohnson.sunriseapp.data.SunriseHourGateway;
 import com.kjohnson.sunriseapp.data.gateway.impl.SunriseHourGatewayImpl;
 import com.kjohnson.sunriseapp.domain.executor.Executor;
 import com.kjohnson.sunriseapp.domain.executor.MainThread;

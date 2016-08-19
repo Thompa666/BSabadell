@@ -6,8 +6,8 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.kjohnson.sunriseapp.data.gateway.AppController;
-import com.kjohnson.sunriseapp.data.gateway.SunriseHourGateway;
+import com.kjohnson.sunriseapp.data.AppController;
+import com.kjohnson.sunriseapp.data.SunriseHourGateway;
 import com.kjohnson.sunriseapp.data.gateway.base.AbstractGateway;
 import com.kjohnson.sunriseapp.domain.executor.Executor;
 

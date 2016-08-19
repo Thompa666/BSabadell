@@ -1,4 +1,4 @@
-package com.kjohnson.sunriseapp.data.gateway;
+package com.kjohnson.sunriseapp.data;
 
 
 
