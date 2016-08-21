@@ -1,7 +1,7 @@
 package com.kjohnson.sunriseapp.domain.interactors.impl;
 
-import com.kjohnson.sunriseapp.data.SunriseHourGateway;
-import com.kjohnson.sunriseapp.data.gateway.impl.SunriseHourGatewayImpl;
+import com.kjohnson.sunriseapp.data.gateway.base.Gateway;
+import com.kjohnson.sunriseapp.data.gateway.impl.GatewayImpl;
 import com.kjohnson.sunriseapp.domain.executor.Executor;
 import com.kjohnson.sunriseapp.domain.executor.MainThread;
 import com.kjohnson.sunriseapp.domain.interactors.SunriseHourInteractor;
@@ -46,7 +46,7 @@ public class SunriseHourInteractorImpl extends AbstractInteractor implements Sun
 //        );
 //
 //        logInInteractor.execute();
-        SunriseHourGateway gateway = new SunriseHourGatewayImpl(mThreadExecutor);
+        Gateway gateway = new GatewayImpl(mUserModel);
         gateway.request();
         //todo depende del resultado llamar a los 2 métodos
         //if rquest ok llamar a mCallback.OnResponseRetrieved(argumentos)
