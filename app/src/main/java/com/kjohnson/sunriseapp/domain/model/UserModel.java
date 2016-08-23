@@ -1,5 +1,7 @@
 package com.kjohnson.sunriseapp.domain.model;
 
+import javax.inject.Inject;
+
 /**
  * Created by wolf on 8/17/2016.
  */
@@ -9,12 +11,13 @@ package com.kjohnson.sunriseapp.domain.model;
  */
 public class UserModel {
 
-    private String mUserName;
-    private String mUserPassword; //This application assumes there will be a secure password system
+    public String mUserName;
+    public String mUserPassword; //This application assumes there will be a secure password system
     private long mLatitude;
     private long mLongitude;
 
-    public UserModel( String userName, String userPassword){
+    @Inject
+    public UserModel(String userName, String userPassword){
         mUserName = userName;
         mUserPassword = userPassword;
     }

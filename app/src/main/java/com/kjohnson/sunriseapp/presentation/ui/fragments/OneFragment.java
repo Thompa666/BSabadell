@@ -51,31 +51,31 @@ public class OneFragment extends Fragment implements SunrisePresenter.View{
 
         findViewsByIds();
 
-        mRequestSunriseHourButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                mUserModel = buildUserModel();
-                mUserModel.setLatLngCoordinatesOnRequest(
-                        mLatitudeEditText.getText().toString(),
-                        mLongitudeEditText.getText().toString()
-                );
-
-                mPresenter = new SunrisePresenterImpl(ThreadExecutor.getInstance(),
-                        MainThreadImpl.getInstance(),
-                        OneFragment.this,
-                        mUserModel);
-
-                mPresenter.onAstronomyApiRequest();
-
-
-
-//                String password = sharedPreferences.getString("password");
+//        mRequestSunriseHourButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
 //
-//            mUserModel = new UserModel()
-
-            }
-        });
+//                mUserModel = buildUserModel();
+//                mUserModel.setLatLngCoordinatesOnRequest(
+//                        mLatitudeEditText.getText().toString(),
+//                        mLongitudeEditText.getText().toString()
+//                );
+//
+//                mPresenter = new SunrisePresenterImpl(ThreadExecutor.getInstance(),
+//                        MainThreadImpl.getInstance(),
+//                        OneFragment.this,
+//                        mUserModel);
+//
+//                mPresenter.onAstronomyApiRequest();
+//
+//
+//
+////                String password = sharedPreferences.getString("password");
+////
+////            mUserModel = new UserModel()
+//
+//            }
+//        });
     }
 
     private UserModel buildUserModel() {

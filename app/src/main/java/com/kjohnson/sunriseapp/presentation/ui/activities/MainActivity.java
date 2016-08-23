@@ -8,12 +8,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.kjohnson.sunriseapp.AndroidApplication;
 import com.kjohnson.sunriseapp.R;
 import com.kjohnson.sunriseapp.domain.executor.impl.ThreadExecutor;
 import com.kjohnson.sunriseapp.domain.model.UserModel;
+import com.kjohnson.sunriseapp.presentation.dependencyInjection.components.UserModelComponent;
 import com.kjohnson.sunriseapp.presentation.presenters.MainPresenter;
 import com.kjohnson.sunriseapp.presentation.presenters.impl.MainPresenterImpl;
 import com.kjohnson.sunriseapp.threading.MainThreadImpl;
+
+import javax.inject.Inject;
 
 import butterknife.ButterKnife;
 
@@ -22,9 +26,11 @@ public class MainActivity extends AppCompatActivity implements MainPresenter.Vie
     private EditText mUserNameEdTxt;
     private EditText mPasswordEdTxt;
     private Button mLoginButton;
+    public UserModelComponent component;
+
 
     private MainPresenter mPresenter;
-    private UserModel mUserModel;
+    @Inject public UserModel mUserModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,12 +39,22 @@ public class MainActivity extends AppCompatActivity implements MainPresenter.Vie
         ButterKnife.bind(this);
 
         findViewsByIds();
+        ((AndroidApplication) getApplication()).getUserModelComponent().inject(this);
+        component = ((AndroidApplication) getApplication()).getUserModelComponent();
+
+
+
 
         mLoginButton.setOnClickListener(new android.view.View.OnClickListener() {
             @Override
             public void onClick(android.view.View v) {
-                mUserModel = new UserModel(mUserNameEdTxt.getText().toString(),
-                        mPasswordEdTxt.getText().toString());
+/*                mUserModel = new UserModel(mUserNameEdTxt.getText().toString(),
+                        mPasswordEdTxt.getText().toString());*/
+
+//                InjectorClass.inject(this);
+                mUserModel.setmUserName("Test injection");
+                mUserModel.setmUserPassword("Pasword injection test");
+
 
                 mPresenter = new MainPresenterImpl(ThreadExecutor.getInstance(),
                         MainThreadImpl.getInstance(),

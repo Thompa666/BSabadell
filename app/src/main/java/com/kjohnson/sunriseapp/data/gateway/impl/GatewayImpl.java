@@ -33,7 +33,7 @@ public class GatewayImpl implements Gateway {
     @Override
     public void request() {
 
-        RequestQueue requestQueue = Volley.newRequestQueue(AndroidApplication.getAppContext());
+       /* RequestQueue requestQueue = Volley.newRequestQueue(AndroidApplication.getAppContext());
 
         CustomRequest customRequest = new CustomRequest(Request.Method.POST, url3, new Response.Listener() {
             @Override
@@ -50,7 +50,7 @@ public class GatewayImpl implements Gateway {
             }
         });
 
-        requestQueue.add(customRequest);
+        requestQueue.add(customRequest);*/
     }
 
 
