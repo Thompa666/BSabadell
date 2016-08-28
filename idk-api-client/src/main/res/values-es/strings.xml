@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="idk_api_error_generic_message">No se ha podido establecer la conexión con el Banco. Por favor, reintente la conexión más tarde. Si el problema persiste, contacte con el servicio técnico.</string>
+
+</resources>

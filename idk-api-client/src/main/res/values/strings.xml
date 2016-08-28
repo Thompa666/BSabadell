@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="idk_api_error_generic_message">No connection with Bank possible Please try
+        again later. If the problem continues, contact the technical service.</string>
+
+</resources>

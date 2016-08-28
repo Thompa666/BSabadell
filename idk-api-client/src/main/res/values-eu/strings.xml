@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="idk_api_error_generic_message">Ezin izan da Bankuarekin konexioa ezarri. Mesedez, saiatu berriz geroxeago. Arazoa ez bada konpondu, jarri harremanetan zerbitzu teknikoarekin.</string>
+
+</resources>
